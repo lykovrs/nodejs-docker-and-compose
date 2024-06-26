@@ -16,10 +16,10 @@ export const schema = Joi.object({
 export default () => ({
   port: parseInt(process.env.PORT, 10) || 3000,
   database: {
-    url: process.env.DATABASE_URL,
-    port: parseInt(process.env.DATABASE_PORT, 10) || 5432,
-    user: process.env.DATABASE_USER,
-    password: process.env.DATABASE_PASSWORD,
+    url: process.env.POSTGRES_HOST,
+    port: parseInt(process.env.POSTGRES_PORT, 10) || 5432,
+    user: process.env.POSTGRES_USER,
+    password: process.env.POSTGRES_PASSWORD,
   },
   jwt: {
     secret: process.env.JWT_SECRET,
